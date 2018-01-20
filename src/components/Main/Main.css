@@ -1,0 +1,19 @@
+.Main {
+  background-color: #ddd;
+  min-width: 700px;
+  padding: 20px;
+}
+.Main h3 {
+  margin: 0;
+}
+.Main ul {
+  list-style: none;
+  padding: 0;
+}
+.Main li {
+   margin-bottom: 20px;
+}
+.Main .board {
+  text-align: center;
+  padding: 50px;
+}
