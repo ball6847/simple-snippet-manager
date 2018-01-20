@@ -5,9 +5,6 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import Main from '../components/Main/Main';
 
 class Snippets extends Component {
-  state = {
-  }
-
   render() {
     return (
       <Layout>
