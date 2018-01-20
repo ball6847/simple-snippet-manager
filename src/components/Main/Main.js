@@ -9,6 +9,6 @@ const Main = (props) => (
       SNIPPET SHOW
     </div>
   </div>
-)
+);
 
-export default Main
+export default Main;

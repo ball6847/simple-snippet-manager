@@ -32,6 +32,6 @@ const Sidebar = (props) => (
       </li>
     </ul>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;

@@ -15,4 +15,4 @@ class Snippets extends Component {
   }
 }
 
-export default Snippets
+export default Snippets;
