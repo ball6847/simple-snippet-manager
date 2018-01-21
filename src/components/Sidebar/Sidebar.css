@@ -1,21 +1,16 @@
 .Sidebar {
   background-color: #eee;
-  min-width: 130px;
-  padding: 20px;
+  padding: 30px 40px;
+  /* min-width: 250px; */
 }
-.Sidebar h3 {
+.Sidebar .content > ul {
   margin: 0;
 }
-.Sidebar > ul {
+.Sidebar .content > ul > li {
   list-style: none;
-  padding: 0;
-}
-.Sidebar > ul > li {
    margin-bottom: 20px;
 }
-.Sidebar > ul ul {
-  padding: 0 0 0 32px;
+.Sidebar .content > ul ul {
 }
-.Sidebar > ul ul li {
-  margin-bottom: 10px;
+.Sidebar .content > ul ul li {
 }
