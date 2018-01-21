@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Sidebar.css';
 
-const Sidebar = (props) => (
+const Sidebar = () => (
   <div className="Sidebar column is-one-fifth">
     <div className="content">
       <ul>
