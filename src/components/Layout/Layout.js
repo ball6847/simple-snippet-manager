@@ -1,10 +1,16 @@
 import React from 'react';
+import Header from '../Header/Header';
+
+import 'bulma/css/bulma.css';
 
 import './Layout.css';
 
-const Layout = (props) => (
+const Layout = ({ children }) => (
   <div className="Layout">
-    {props.children}
+    <Header />
+    <div className="container">
+      <div className="columns">{children}</div>
+    </div>
   </div>
 );
 
