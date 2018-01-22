@@ -7,6 +7,11 @@
     "class-methods-use-this": ["off"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "space-infix-ops": ["error"],
+    "no-multi-spaces": ["error"],
+    "keyword-spacing": ["error"],
+    "max-len": ["error", { "code": 120 }],
+    "no-multiple-empty-lines": ["error", {"max": 2}]
   }
 }
