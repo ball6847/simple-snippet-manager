@@ -32,7 +32,7 @@ class Sidebar extends Component {
             { value: 'js', label: 'JavaScript' },
             { value: 'react', label: 'React' },
             { value: 'node', label: 'Node.js' },
-            { value: 'php', label: 'PHP' }
+            { value: 'php', label: 'PHP' },
           ]}
         />
         {this.state.selectedOption ? <ListSnippet /> : null}
