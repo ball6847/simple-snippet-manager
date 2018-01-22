@@ -6,30 +6,36 @@ class AddSnippet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: '',
+      lang: 'javascript',
+      title: '',
       snippet: ''
     };
 
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handleTextarea = this.handleTextarea.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLang = this.handleLang.bind(this);
+    this.handleTitle = this.handleTitle.bind(this);
+    this.handleSnippet = this.handleSnippet.bind(this);
     this.clearSnippet = this.clearSnippet.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSelect(event) {
+  handleLang(event) {
     this.setState({lang: event.target.value});
   }
 
-  handleTextarea(event) {
-    this.setState({snippet: event.target.value});
+  handleTitle(event) {
+    this.setState({title: event.target.value});
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSnippet(event) {
+    this.setState({snippet: event.target.value});
   }
 
   clearSnippet() {
     this.setState({snippet: ''});
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
   }
 
   render() {
@@ -38,10 +44,10 @@ class AddSnippet extends Component {
         <h1 className="title">Add Snippet</h1>
         <form onSubmit={this.handleSubmit}>
 
-          <div class="field">
-            <div class="control">
-              <div class="select">
-                <select value={this.state.lang} onChange={this.handleSelect}>
+          <div className="field">
+            <div className="control">
+              <div className="select">
+                <select value={this.state.lang} onChange={this.handleLang}>
                   <option value="javascript">JavaScript</option>
                   <option value="php">PHP</option>
                   <option value="python">Python</option>
@@ -52,23 +58,35 @@ class AddSnippet extends Component {
             </div>
           </div>
 
-          <div class="field">
-            <div class="control">
+          <div className="field">
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Title"
+                onChange={this.handleTitle}
+                value={this.state.title}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <div className="control">
               <textarea
-                class="textarea"
+                className="textarea"
                 placeholder="Type your snippet..."
-                onChange={this.handleTextarea}
+                onChange={this.handleSnippet}
                 value={this.state.snippet}
               ></textarea>
             </div>
           </div>
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
+          <div className="field is-grouped">
+            <div className="control">
+              <button className="button is-link">Submit</button>
             </div>
-            <div class="control">
-              <button class="button is-text" onClick={this.clearSnippet}>Clear</button>
+            <div className="control">
+              <button className="button is-text" onClick={this.clearSnippet}>Clear</button>
             </div>
           </div>
         </form>
