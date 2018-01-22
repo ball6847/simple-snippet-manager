@@ -18,7 +18,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "prettier": "prettier 'src/**/*.js' --write"
+    "prettier": "prettier 'src/**/*.js' --write",
+    "precommit": "yarn run lint && yarn run prettier"
   },
   "devDependencies": {
     "eslint-config-esnext": "^2.0.0",
