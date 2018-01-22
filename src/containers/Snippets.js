@@ -4,8 +4,6 @@ import Layout from '../components/Layout/Layout';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Main from '../components/Main/Main';
 
-// import AddSnippet from '../components/AddSnippet/AddSnippet';
-
 class Snippets extends Component {
   render() {
     return (

@@ -16,7 +16,6 @@ class AddSnippet extends Component {
   }
 
   handleSubmit(event) {
-    // alert('An snippet was submitted: ' + this.state.value);
     event.preventDefault();
   }
 
