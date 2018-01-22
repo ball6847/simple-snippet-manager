@@ -8,7 +8,7 @@ class AddSnippet extends Component {
     this.state = {
       lang: 'javascript',
       title: '',
-      snippet: ''
+      snippet: '',
     };
 
     this.handleLang = this.handleLang.bind(this);
@@ -19,19 +19,19 @@ class AddSnippet extends Component {
   }
 
   handleLang(event) {
-    this.setState({lang: event.target.value});
+    this.setState({ lang: event.target.value });
   }
 
   handleTitle(event) {
-    this.setState({title: event.target.value});
+    this.setState({ title: event.target.value });
   }
 
   handleSnippet(event) {
-    this.setState({snippet: event.target.value});
+    this.setState({ snippet: event.target.value });
   }
 
   clearSnippet() {
-    this.setState({snippet: ''});
+    this.setState({ snippet: '' });
   }
 
   handleSubmit(event) {
@@ -39,11 +39,10 @@ class AddSnippet extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="AddSnippet">
         <h1 className="title">Add Snippet</h1>
         <form onSubmit={this.handleSubmit}>
-
           <div className="field">
             <div className="control">
               <div className="select">
@@ -77,7 +76,7 @@ class AddSnippet extends Component {
                 placeholder="Type your snippet..."
                 onChange={this.handleSnippet}
                 value={this.state.snippet}
-              ></textarea>
+              />
             </div>
           </div>
 
@@ -86,7 +85,9 @@ class AddSnippet extends Component {
               <button className="button is-link">Submit</button>
             </div>
             <div className="control">
-              <button className="button is-text" onClick={this.clearSnippet}>Clear</button>
+              <button className="button is-text" onClick={this.clearSnippet}>
+                Clear
+              </button>
             </div>
           </div>
         </form>

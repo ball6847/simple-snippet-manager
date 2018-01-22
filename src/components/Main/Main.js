@@ -9,21 +9,15 @@ import './Main.css';
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {addSnippet: false};
+    this.state = { addSnippet: false };
   }
 
   render() {
     return (
       <div className="Main column">
-        <Button
-          addSnippet={this.state.addSnippet}
-          toggleSnippet={(addSnippet) => this.setState({addSnippet})}
-        />
+        <Button addSnippet={this.state.addSnippet} toggleSnippet={addSnippet => this.setState({ addSnippet })} />
 
-        { this.state.addSnippet
-          ? <AddSnippet />
-          : <ShowSnippet />
-        }
+        {this.state.addSnippet ? <AddSnippet /> : <ShowSnippet />}
       </div>
     );
   }
