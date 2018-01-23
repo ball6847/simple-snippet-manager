@@ -6,17 +6,13 @@ class FormSnippet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      snippet: {
-        lang: props.snippet.lang,
-        title: props.snippet.title,
-        code: props.snippet.code,
-      },
+      snippet: props.snippet
     };
 
     this.handleLang = this.handleLang.bind(this);
     this.handleTitle = this.handleTitle.bind(this);
     this.handleCode = this.handleCode.bind(this);
-    this.clearSnippet = this.clearSnippet.bind(this);
+    this.clearCode = this.clearCode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -35,7 +31,7 @@ class FormSnippet extends Component {
     this.setState(prevState => ({ snippet: { ...prevState.snippet, code } }));
   }
 
-  clearSnippet() {
+  clearCode() {
     const code = '';
     this.setState(prevState => ({ snippet: { ...prevState.snippet, code } }));
   }
@@ -91,7 +87,7 @@ class FormSnippet extends Component {
               <button className="button is-link">Submit</button>
             </div>
             <div className="control">
-              <button className="button is-text" onClick={this.clearSnippet}>
+              <button className="button is-text" onClick={this.clearCode}>
                 Clear
               </button>
             </div>
