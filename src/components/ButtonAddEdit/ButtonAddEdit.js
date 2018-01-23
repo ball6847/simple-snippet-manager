@@ -11,8 +11,8 @@ const ButtonAddEdit = ({ name, state, setstate }) => {
   }
 
   return (
-    <a className={`ButtonAddEdit button ${ btnStyle }`} onClick={() => setstate(!state)}>
-      { state ? 'Cancel' : name }
+    <a className={`ButtonAddEdit button ${btnStyle}`} onClick={() => setstate(!state)}>
+      {state ? 'Cancel' : name}
     </a>
   );
 };

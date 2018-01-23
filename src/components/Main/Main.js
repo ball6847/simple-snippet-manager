@@ -12,7 +12,7 @@ class Main extends Component {
     super(props);
     this.state = {
       addSnippet: false,
-      editSnippet: false
+      editSnippet: false,
     };
   }
 
