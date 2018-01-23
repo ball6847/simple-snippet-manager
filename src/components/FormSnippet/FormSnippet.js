@@ -6,9 +6,9 @@ class FormSnippet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: 'javascript',
-      title: '',
-      snippet: '',
+      lang: props.lang,
+      title: props.title,
+      snippet: props.snippet,
     };
 
     this.handleLang = this.handleLang.bind(this);
@@ -47,7 +47,7 @@ class FormSnippet extends Component {
             <div className="control">
               <div className="select">
                 <select value={this.state.lang} onChange={this.handleLang}>
-                  <option value="javascript">JavaScript</option>
+                  <option value="js">JavaScript</option>
                   <option value="php">PHP</option>
                   <option value="python">Python</option>
                   <option value="node">Node.js</option>
@@ -95,5 +95,12 @@ class FormSnippet extends Component {
     );
   }
 }
+
+// Specifies the default values for props:
+FormSnippet.defaultProps = {
+  lang: 'js',
+  title: '',
+  snippet: '',
+};
 
 export default FormSnippet;
