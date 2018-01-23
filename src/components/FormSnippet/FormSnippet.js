@@ -21,42 +21,23 @@ class FormSnippet extends Component {
   }
 
   handleLang(e) {
-    const val = e.target.value;
-    this.setState(prevState => ({
-      snippet: {
-        ...prevState.snippet,
-        lang: val,
-      },
-    }));
+    const lang = e.target.value;
+    this.setState(prevState => ({ snippet: { ...prevState.snippet, lang } }));
   }
 
   handleTitle(e) {
-    const val = e.target.value;
-    this.setState(prevState => ({
-      snippet: {
-        ...prevState.snippet,
-        title: val,
-      },
-    }));
+    const title = e.target.value;
+    this.setState(prevState => ({ snippet: { ...prevState.snippet, title } }));
   }
 
   handleCode(e) {
-    const val = e.target.value;
-    this.setState(prevState => ({
-      snippet: {
-        ...prevState.snippet,
-        code: val,
-      },
-    }));
+    const code = e.target.value;
+    this.setState(prevState => ({ snippet: { ...prevState.snippet, code } }));
   }
 
   clearSnippet() {
-    this.setState(prevState => ({
-      snippet: {
-        ...prevState.snippet,
-        code: '',
-      },
-    }));
+    const code = '';
+    this.setState(prevState => ({ snippet: { ...prevState.snippet, code } }));
   }
 
   handleSubmit(e) {
