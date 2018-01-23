@@ -5,6 +5,7 @@
   ],
   "rules": {
     "class-methods-use-this": ["off"],
+    "no-invalid-this": ["off"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "indent": ["error", 2],
