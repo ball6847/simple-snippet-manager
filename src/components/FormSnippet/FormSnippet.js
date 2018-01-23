@@ -10,7 +10,7 @@ class FormSnippet extends Component {
         lang: props.lang,
         title: props.title,
         code: props.code,
-      }
+      },
     };
 
     this.handleLang = this.handleLang.bind(this);
@@ -26,8 +26,8 @@ class FormSnippet extends Component {
     this.setState(prevState => ({
       snippet: {
         ...prevState.snippet,
-        lang: val
-      }
+        lang: val,
+      },
     }));
   }
 
@@ -36,8 +36,8 @@ class FormSnippet extends Component {
     this.setState(prevState => ({
       snippet: {
         ...prevState.snippet,
-        title: val
-      }
+        title: val,
+      },
     }));
   }
 
@@ -46,8 +46,8 @@ class FormSnippet extends Component {
     this.setState(prevState => ({
       snippet: {
         ...prevState.snippet,
-        code: val
-      }
+        code: val,
+      },
     }));
   }
 
@@ -55,8 +55,8 @@ class FormSnippet extends Component {
     this.setState(prevState => ({
       snippet: {
         ...prevState.snippet,
-        code: ''
-      }
+        code: '',
+      },
     }));
   }
 
@@ -128,7 +128,7 @@ FormSnippet.defaultProps = {
     lang: 'js',
     title: '',
     code: '',
-  }
+  },
 };
 
 export default FormSnippet;
