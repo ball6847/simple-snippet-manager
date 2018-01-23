@@ -6,36 +6,62 @@ class FormSnippet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: props.lang,
-      title: props.title,
-      snippet: props.snippet,
+      snippet: {
+        lang: props.lang,
+        title: props.title,
+        code: props.code,
+      }
     };
 
     this.handleLang = this.handleLang.bind(this);
     this.handleTitle = this.handleTitle.bind(this);
-    this.handleSnippet = this.handleSnippet.bind(this);
+    this.handleCode = this.handleCode.bind(this);
     this.clearSnippet = this.clearSnippet.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleLang(event) {
-    this.setState({ lang: event.target.value });
+  handleLang(e) {
+    // this.setState({ lang: event.target.value });
+    const val = e.target.value;
+    this.setState(prevState => ({
+      snippet: {
+        ...prevState.snippet,
+        lang: val
+      }
+    }));
   }
 
-  handleTitle(event) {
-    this.setState({ title: event.target.value });
+  handleTitle(e) {
+    const val = e.target.value;
+    this.setState(prevState => ({
+      snippet: {
+        ...prevState.snippet,
+        title: val
+      }
+    }));
   }
 
-  handleSnippet(event) {
-    this.setState({ snippet: event.target.value });
+  handleCode(e) {
+    const val = e.target.value;
+    this.setState(prevState => ({
+      snippet: {
+        ...prevState.snippet,
+        code: val
+      }
+    }));
   }
 
   clearSnippet() {
-    this.setState({ snippet: '' });
+    this.setState(prevState => ({
+      snippet: {
+        ...prevState.snippet,
+        code: ''
+      }
+    }));
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
@@ -46,7 +72,7 @@ class FormSnippet extends Component {
           <div className="field">
             <div className="control">
               <div className="select">
-                <select value={this.state.lang} onChange={this.handleLang}>
+                <select value={this.state.snippet.lang} onChange={this.handleLang}>
                   <option value="js">JavaScript</option>
                   <option value="php">PHP</option>
                   <option value="python">Python</option>
@@ -63,8 +89,8 @@ class FormSnippet extends Component {
                 className="input"
                 type="text"
                 placeholder="Title"
+                value={this.state.snippet.title}
                 onChange={this.handleTitle}
-                value={this.state.title}
               />
             </div>
           </div>
@@ -74,8 +100,8 @@ class FormSnippet extends Component {
               <textarea
                 className="textarea"
                 placeholder="Type your snippet..."
-                onChange={this.handleSnippet}
-                value={this.state.snippet}
+                value={this.state.snippet.code}
+                onChange={this.handleCode}
               />
             </div>
           </div>
@@ -98,9 +124,11 @@ class FormSnippet extends Component {
 
 // Specifies the default values for props:
 FormSnippet.defaultProps = {
-  lang: 'js',
-  title: '',
-  snippet: '',
+  snippet: {
+    lang: 'js',
+    title: '',
+    code: '',
+  }
 };
 
 export default FormSnippet;
