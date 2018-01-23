@@ -2,13 +2,19 @@ import React from 'react';
 
 import './ButtonAddEdit.css';
 
-const ButtonAddEdit = ({ addSnippet, toggleSnippet }) => (
-  <div className="ButtonAddEdit">
-    <a className="button is-link" onClick={() => toggleSnippet(!addSnippet)}>
-      {addSnippet ? 'Cancel' : 'Add'}
+const ButtonAddEdit = ({ name, state, setstate }) => {
+  let btnStyle;
+  if (name === 'Add') {
+    btnStyle = 'is-link';
+  } else {
+    btnStyle = 'is-warning';
+  }
+
+  return (
+    <a className={`ButtonAddEdit button ${ btnStyle }`} onClick={() => setstate(!state)}>
+      { state ? 'Cancel' : name }
     </a>
-    <a className="button is-warning">Edit</a>
-  </div>
-);
+  );
+};
 
 export default ButtonAddEdit;
