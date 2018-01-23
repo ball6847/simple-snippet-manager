@@ -6,7 +6,7 @@ class FormSnippet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      snippet: props.snippet
+      snippet: props.snippet,
     };
 
     this.handleLang = this.handleLang.bind(this);
