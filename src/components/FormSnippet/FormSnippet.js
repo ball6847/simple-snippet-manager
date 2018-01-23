@@ -7,9 +7,9 @@ class FormSnippet extends Component {
     super(props);
     this.state = {
       snippet: {
-        lang: props.lang,
-        title: props.title,
-        code: props.code,
+        lang: props.snippet.lang,
+        title: props.snippet.title,
+        code: props.snippet.code,
       },
     };
 
@@ -21,7 +21,6 @@ class FormSnippet extends Component {
   }
 
   handleLang(e) {
-    // this.setState({ lang: event.target.value });
     const val = e.target.value;
     this.setState(prevState => ({
       snippet: {
@@ -122,7 +121,6 @@ class FormSnippet extends Component {
   }
 }
 
-// Specifies the default values for props:
 FormSnippet.defaultProps = {
   snippet: {
     lang: 'js',
