@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './Button.css';
+import './ButtonAddEdit.css';
 
-const Button = ({ addSnippet, toggleSnippet }) => (
-  <div className="Button">
+const ButtonAddEdit = ({ addSnippet, toggleSnippet }) => (
+  <div className="ButtonAddEdit">
     <a className="button is-link" onClick={() => toggleSnippet(!addSnippet)}>
       {addSnippet ? 'Cancel' : 'Add'}
     </a>
@@ -11,4 +11,4 @@ const Button = ({ addSnippet, toggleSnippet }) => (
   </div>
 );
 
-export default Button;
+export default ButtonAddEdit;

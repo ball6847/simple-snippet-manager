@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Button from '../Button/Button';
-import ShowSnippet from '../ShowSnippet/ShowSnippet';
 import AddSnippet from '../AddSnippet/AddSnippet';
+import ButtonAddEdit from '../ButtonAddEdit/ButtonAddEdit';
+import ShowSnippet from '../ShowSnippet/ShowSnippet';
 
 import './Main.css';
 
@@ -15,7 +15,7 @@ class Main extends Component {
   render() {
     return (
       <div className="Main column">
-        <Button addSnippet={this.state.addSnippet} toggleSnippet={addSnippet => this.setState({ addSnippet })} />
+        <ButtonAddEdit addSnippet={this.state.addSnippet} toggleSnippet={addSnippet => this.setState({ addSnippet })} />
 
         {this.state.addSnippet ? <AddSnippet /> : <ShowSnippet />}
       </div>
